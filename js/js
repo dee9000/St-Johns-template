@@ -1,0 +1,25 @@
+
+
+    //play pause
+   var ppbutton = document.getElementById("vidbutton");
+   ppbutton.addEventListener("click", playPause);
+   myVideo = document.getElementById("myvid");
+   function playPause() {
+       if (myVideo.paused) {
+           myVideo.play();
+           ppbutton.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+           }
+       else  {
+           myVideo.pause();
+           ppbutton.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+           }
+   }
+
+   //play pause video on re-size
+
+   var videoSel = document.getElementById("myvid");
+   function videoHandler(){
+       videoSel[window.innerWidth<800?"pause":"play"]();
+   }
+   videoHandler();
+   window.addEventListener("resize", videoHandler, false);
