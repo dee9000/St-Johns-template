@@ -1,6 +1,8 @@
 
 
     //play pause
+
+
    var ppbutton = document.getElementById("vidbutton");
    ppbutton.addEventListener("click", playPause);
    myVideo = document.getElementById("myvid");
@@ -17,9 +19,9 @@
 
    //play pause video on re-size
 
-   var videoSel = document.getElementById("myvid");
-   function videoHandler(){
-       videoSel[window.innerWidth<800?"pause":"play"]();
-   }
-   videoHandler();
-   window.addEventListener("resize", videoHandler, false);
+   //var videoSel = document.getElementById("myvid");
+   //function videoHandler(){
+       //videoSel[window.innerWidth<800?"pause":"play"]();
+   //}
+   //videoHandler();
+   //window.addEventListener("resize", videoHandler, false);
